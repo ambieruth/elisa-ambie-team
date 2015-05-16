@@ -5,6 +5,7 @@
  */
 package buildyourdreamhome;
 
+import byui.cit260.buildYourDreamHome.model.InventoryItems;
 import byui.cit260.buildYourDreamHome.model.Player;
 
 /**
@@ -24,6 +25,15 @@ public class BuildYourDreamHome {
         
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);
+        
+        InventoryItems menu = new InventoryItems();
+        
+        menu.setInventoryType("Windows, LightFixtures, Decor, Countertops, Landscape, Cement, Lumber");
+        menu.setQuantityInStock(10);
+        menu.setRequiredAmount(7);
+        
+        String menuItems = menu.toString();
+        System.out.println(menuItems);
     }
     
 }
