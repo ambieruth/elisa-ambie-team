@@ -164,6 +164,120 @@ public class InventoryControlTest {
         assertEquals(expResult, result, 0.0);
         
            }
+
+    /**
+     * Test of calcGrassAmount method, of class InventoryControl.
+     */
+    @Test
+    public void testCalcGrassAmount() {
+        System.out.println("calcGrassAmount");
+        
+        System.out.println("\\+Test case #1");
+        
+         //input values for test case 1
+        double width = 8450;
+        double length = 10642;
+        
+        double expResult = 89924900; //expected output returned value
+        //create instance of InventoryControl class
+        InventoryControl instance = new InventoryControl();
+        
+        //call function to run test
+        double result = instance.calcGrassAmount(width, length);
+        
+        //compare expected return value with actual value returned
+        assertEquals(expResult, result, 0.0);
+        
+         System.out.println("\\+Test case #2");
+        
+         //input values for test case 2
+        width = -1;
+        length = 14362;
+        
+        expResult = -1; //expected output returned value
+        //create instance of InventoryControl class
+        
+        //call function to run test
+        result = instance.calcGrassAmount(width, length);
+        
+        //compare expected return value with actual value returned
+        assertEquals(expResult, result, 0.0);
+        
+         System.out.println("\\+Test case #3");
+        
+         //input values for test case 3
+        width = 17574;
+        length = 1024;
+        
+        expResult = 17995776; //expected output returned value
+        //create instance of InventoryControl class
+        
+        //call function to run test
+        result = instance.calcGrassAmount(width, length);
+        
+        //compare expected return value with actual value returned
+        assertEquals(expResult, result, 0.0);
+        
+         System.out.println("\\+Test case #4");
+        
+         //input values for test case 4
+        width = 4567;
+        length = 75354;
+        
+        expResult = 344141718; //expected output returned value
+        //create instance of InventoryControl class
+        
+        //call function to run test
+        result = instance.calcGrassAmount(width, length);
+        
+        //compare expected return value with actual value returned
+        assertEquals(expResult, result, 0.0);
+        
+         System.out.println("\\+Test case #5");
+        
+         //input values for test case 5
+        width = 10654;
+        length = 10539.5;
+        
+        expResult = 112287833; //expected output returned value
+        //create instance of InventoryControl class
+        
+        //call function to run test
+        result = instance.calcGrassAmount(width, length);
+        
+        //compare expected return value with actual value returned
+        assertEquals(expResult, result, 0.0);
+        
+         System.out.println("\\+Test case #6");
+        
+         //input values for test case 6
+        width = 25787;
+        length = 148.75;
+        
+        expResult = 3835816.25; //expected output returned value
+        //create instance of InventoryControl class
+        
+        //call function to run test
+        result = instance.calcGrassAmount(width, length);
+        
+        //compare expected return value with actual value returned
+        assertEquals(expResult, result, 0.0);
+        
+         System.out.println("\\+Test case #7");
+        
+         //input values for test case 7
+        width = 16989;
+        length = 7362;
+        
+        expResult = 125073018; //expected output returned value
+        //create instance of InventoryControl class
+        
+        //call function to run test
+        result = instance.calcGrassAmount(width, length);
+        
+        //compare expected return value with actual value returned
+        assertEquals(expResult, result, 0.0);
+    }
         
     
 }

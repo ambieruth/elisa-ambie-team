@@ -28,6 +28,22 @@ public class InventoryControl {
     double dimension = length * width * height;
     
     return dimension;
-            
+    }
+ 
+    public double calcGrassAmount (double width, double length) {
+        
+    if (width <0) {
+        return -1;
+    }
+    
+    if (length < 0) {
+        return -1;
+    }
+    
+    double dimension ;
+        dimension = length * width;
+    
+    return dimension;
+    }
 }
-}
+
