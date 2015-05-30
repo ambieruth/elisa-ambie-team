@@ -172,6 +172,9 @@ public class InventoryControlTest {
     public void testCalcGrassAmount() {
         System.out.println("calcGrassAmount");
         
+          /**************************
+         * Test case #1
+         *************************/
         System.out.println("\\+Test case #1");
         
          //input values for test case 1
@@ -188,7 +191,10 @@ public class InventoryControlTest {
         //compare expected return value with actual value returned
         assertEquals(expResult, result, 0.0);
         
-         System.out.println("\\+Test case #2");
+          /**************************
+         * Test case #2
+         *************************/ 
+        System.out.println("\\+Test case #2");
         
          //input values for test case 2
         width = -1;
@@ -203,6 +209,9 @@ public class InventoryControlTest {
         //compare expected return value with actual value returned
         assertEquals(expResult, result, 0.0);
         
+          /**************************
+         * Test case #3
+         *************************/
          System.out.println("\\+Test case #3");
         
          //input values for test case 3
@@ -218,6 +227,9 @@ public class InventoryControlTest {
         //compare expected return value with actual value returned
         assertEquals(expResult, result, 0.0);
         
+          /**************************
+         * Test case #4
+         *************************/
          System.out.println("\\+Test case #4");
         
          //input values for test case 4
@@ -233,6 +245,9 @@ public class InventoryControlTest {
         //compare expected return value with actual value returned
         assertEquals(expResult, result, 0.0);
         
+          /**************************
+         * Test case #5
+         *************************/
          System.out.println("\\+Test case #5");
         
          //input values for test case 5
@@ -248,6 +263,9 @@ public class InventoryControlTest {
         //compare expected return value with actual value returned
         assertEquals(expResult, result, 0.0);
         
+          /**************************
+         * Test case #6
+         *************************/
          System.out.println("\\+Test case #6");
         
          //input values for test case 6
@@ -263,7 +281,10 @@ public class InventoryControlTest {
         //compare expected return value with actual value returned
         assertEquals(expResult, result, 0.0);
         
-         System.out.println("\\+Test case #7");
+          /**************************
+         * Test case #1
+         *************************/
+        System.out.println("\\+Test case #7");
         
          //input values for test case 7
         width = 16989;

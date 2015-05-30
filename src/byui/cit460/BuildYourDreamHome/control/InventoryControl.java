@@ -45,5 +45,21 @@ public class InventoryControl {
     
     return dimension;
     }
+    
+    public double calcWindowSize (double width, double length) {
+        
+    if (width <0) {
+        return -1;
+    }
+    
+    if (length < 0) {
+        return -1;
+    }
+    
+    double dimension ;
+        dimension = length * width;
+    
+    return dimension;
+    }
 }
 
