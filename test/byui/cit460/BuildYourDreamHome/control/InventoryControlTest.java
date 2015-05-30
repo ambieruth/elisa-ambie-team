@@ -67,7 +67,7 @@ public class InventoryControlTest {
         
            
         
-                 /**************************
+        /**************************
          * Test case #3
          *************************/
         System.out.println("\\+Test case #3");
@@ -86,7 +86,7 @@ public class InventoryControlTest {
         assertEquals(expResult, result, 0.0);
         
         
-                 /**************************
+         /**************************
          * Test case #4
          *************************/
         System.out.println("\\+Test case #4");
@@ -106,7 +106,7 @@ public class InventoryControlTest {
         
         
         
-                 /**************************
+         /**************************
          * Test case #5
          *************************/
         System.out.println("\\+Test case #5");
@@ -126,7 +126,7 @@ public class InventoryControlTest {
         
         
         
-                 /**************************
+        /**************************
          * Test case #6
          *************************/
         System.out.println("\\+Test case #6");
@@ -145,7 +145,7 @@ public class InventoryControlTest {
         assertEquals(expResult, result, 0.0);
         
                 
-                 /**************************
+        /**************************
          * Test case #7
          *************************/
         System.out.println("\\+Test case #7");
@@ -169,6 +169,10 @@ public class InventoryControlTest {
      * Test of calcGrassAmount method, of class InventoryControl.
      */
     @Test
+    /**
+     *
+     * @author ambieruth
+     */
     public void testCalcGrassAmount() {
         System.out.println("calcGrassAmount");
         
@@ -282,7 +286,7 @@ public class InventoryControlTest {
         assertEquals(expResult, result, 0.0);
         
           /**************************
-         * Test case #1
+         * Test case #7
          *************************/
         System.out.println("\\+Test case #7");
         
@@ -299,6 +303,132 @@ public class InventoryControlTest {
         //compare expected return value with actual value returned
         assertEquals(expResult, result, 0.0);
     }
-        
     
+    public void testWindowSize() {
+        System.out.println("calcWindowSize");
+        
+        /**************************
+         * Test case #1
+         *************************/
+        System.out.println("\\+Test case #1");
+        
+        //input values for test case 1
+        double height = 3;
+        double length = 4;
+        
+        //create instance of InventoryControl class
+        InventoryControl instance = new InventoryControl();
+        
+        double expResult =12; //expected output returned value
+        
+        //call function to run test
+        double result = instance.calcWindowSize(height,length);
+        
+        //compare expected return value with actual value returned
+        assertEquals(expResult, result, 0.0);
+        
+        /**************************
+         * Test case #2
+         *************************/
+        System.out.println("\\+Test case #2");
+        
+        //input values for test case 2
+        height = -2;
+        length = 16;
+        
+        expResult =-1; //expected output returned value
+        
+        //call function to run test
+        result = instance.calcWindowSize(height,length);
+        
+        //compare expected return value with actual value returned
+        assertEquals(expResult, result, 0.0); 
+        
+         /**************************
+         * Test case #3
+         *************************/
+        System.out.println("\\+Test case #3");
+        
+        //input values for test case 3
+        height = 4;
+        length = 5;
+        
+        expResult =20; //expected output returned value
+        
+        //call function to run test
+        result = instance.calcWindowSize(height,length);
+        
+        //compare expected return value with actual value returned
+        assertEquals(expResult, result, 0.0); 
+        
+         /**************************
+         * Test case #4
+         *************************/
+        System.out.println("\\+Test case #4");
+        
+        //input values for test case 4
+        height = -12;
+        length = 138;
+        
+        expResult =-1; //expected output returned value
+        
+        //call function to run test
+        result = instance.calcWindowSize(height,length);
+        
+        //compare expected return value with actual value returned
+        assertEquals(expResult, result, 0.0); 
+        
+         /**************************
+         * Test case #5
+         *************************/
+        System.out.println("\\+Test case #5");
+        
+        //input values for test case 5
+        height = 6;
+        length = 6;
+        
+        expResult =36; //expected output returned value
+        
+        //call function to run test
+        result = instance.calcWindowSize(height,length);
+        
+        //compare expected return value with actual value returned
+        assertEquals(expResult, result, 0.0); 
+        
+         /**************************
+         * Test case #6
+         *************************/
+        System.out.println("\\+Test case #6");
+        
+        //input values for test case 6
+        height = 2.5;
+        length = 3;
+        
+        expResult =7.5; //expected output returned value
+        
+        //call function to run test
+        result = instance.calcWindowSize(height,length);
+        
+        //compare expected return value with actual value returned
+        assertEquals(expResult, result, 0.0); 
+        
+         /**************************
+         * Test case #7
+         *************************/
+        System.out.println("\\+Test case #7");
+        
+        //input values for test case 7
+        height = .5;
+        length = 3;
+        
+        expResult = 1.5; //expected output returned value
+        
+        //call function to run test
+        result = instance.calcWindowSize(height,length);
+        
+        //compare expected return value with actual value returned
+        assertEquals(expResult, result, 0.0); 
+         }
 }
+    
+ 
