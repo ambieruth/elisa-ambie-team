@@ -13,9 +13,7 @@ import byui.cit460.BuildYourDreamHome.control.GameControl;
  * @author ambiesnell
  */
 public class MainMenuView {
-    void displayMenu() {
-            System.out.println("\n*** displayMenu stub function called ***");
-        }
+    
     
     private final String MENU ="\n"
             + "\n--------------------------------------------------------------"
@@ -70,17 +68,7 @@ public class MainMenuView {
         System.out.println("***displayHelpMenu function called***");
     }
 
-    private static class GameMenuView {
 
-        public GameMenuView() {
-            
-            
-        }
-
-        private void displayMenu() {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-    }
     
     }
     

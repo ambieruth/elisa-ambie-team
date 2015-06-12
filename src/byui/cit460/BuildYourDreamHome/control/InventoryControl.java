@@ -54,7 +54,7 @@ public class InventoryControl {
     return dimension;
     }
     
-    public calcCountertops (double width, double length, double height) {
+    public double calcCountertops (double width, double length, double height) {
         if  (width < 0){
             return -1;
         }
