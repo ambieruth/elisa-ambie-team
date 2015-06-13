@@ -7,6 +7,7 @@ package citbyui.cit260.BuildYourDreamHome.View;
 
 import buildyourdreamhome.BuildYourDreamHome;
 import byui.cit460.BuildYourDreamHome.control.GameControl;
+import java.util.Scanner;
 
 /**
  *
@@ -19,7 +20,8 @@ public class MainMenuView {
             + "\n--------------------------------------------------------------"
             + "\n| Main Menu                                                  |"
             + "\n--------------------------------------------------------------"
-            + "\nG - Start game"
+            + "\nN - New game"
+            + "\nG - Load saved game"
             + "\nH - Get help on how to play the game"
             + "\nS - Save game"
             + "\nE - Exit"
@@ -42,15 +44,58 @@ public class MainMenuView {
     }
 
     private String getInput() {
-        return null;
+        Scanner keyboard = new Scanner(System.in);
+        boolean valid = false;
+        String selection = null;
+        
+        //while a valid name has not been retrieved
+        while (!valid) {
+            
+            //get the value entered from the keyboard
+            selection = keyboard.nextLine();
+            selection = selection.trim();
+            
+            if (selection.length() <1) { //blank value entered
+                System.out.println("\n*** Invalid selection *** Try again");
+                continue;
+            }
+            
+            break;
+        }
+        
+        return selection; //return the name
     }
 
     private void doAction(char selection) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        switch (selection) {
+            case 'N': //create and start a new game
+                this.startNewGame();
+                break;
+            case 'G': //get and start an existing game
+                this.startExistingGame();
+                break;
+            case 'H': //display the help menu
+                this.displayHelpMenu();
+                break;
+            case 'S': //save the current game
+                this.saveGame();
+                break;
+            case 'E': //exit the program
+                return;
+            default:
+                System.out.println("\n*** Invalid selection *** Try again");
+                break;
+        }
     }
     
     private void startNewGame (){
-        GameControl.createNewGame(BuildYourDreamHome.getPlayer());
+        
+        // create a new game
+        int value = GameControl.createNewGame(BuildYourDreamHome.getPlayer());
+        if (value<0) {
+            System.out.println("ERROR - Failed to create new game");
+        }
         
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.displayMenu();
