@@ -24,6 +24,8 @@ public class StartProgramView {
         
         // prompt the player to enter their name Retrieve the name of the player
         String playersName = this.getPlayersName();
+        if (playersName == null) //user wants to quit
+            return; //exit the game
         
         // Create and save the player object
         Player player = GameControl.createPlayer(playersName);
