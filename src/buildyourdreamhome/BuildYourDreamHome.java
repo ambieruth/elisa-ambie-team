@@ -38,7 +38,9 @@ public class BuildYourDreamHome {
         return player;
     }
     public static void setPlayer(Player player) {
-        BuildYourDreamHome.player = player;  
+        BuildYourDreamHome.player = player; 
+        
+        
     }
     
 }

@@ -13,10 +13,10 @@ import java.util.Scanner;
  *
  * @author ambiesnell
  */
-public class MainMenuView {
-    
-    
-    private final String MENU ="\n"
+public class MainMenuView extends View {
+
+    public MainMenuView() {
+        super( "\n"
             + "\n--------------------------------------------------------------"
             + "\n| Main Menu                                                  |"
             + "\n--------------------------------------------------------------"
@@ -25,48 +25,10 @@ public class MainMenuView {
             + "\nH - Get help on how to play the game"
             + "\nS - Save game"
             + "\nE - Exit"
-            + "\n--------------------------------------------------------------";
-    
-    
-
-    public void displayMenu() {
-        
-        char selection = ' ';
-        do {
-            
-           System.out.println(MENU); // display the main menu
-           
-           String input = this.getInput(); // get the user's selection
-           selection = input.charAt(0); // get first character of string
-           
-           this.doAction(selection); // do action based on selection
-        } while (selection != 'E'); // a selection is not "Exit"
+            + "\n--------------------------------------------------------------");
     }
-
-    private String getInput() {
-        Scanner keyboard = new Scanner(System.in);
-        boolean valid = false;
-        String selection = null;
-        
-        //while a valid name has not been retrieved
-        while (!valid) {
-            
-            //get the value entered from the keyboard
-            selection = keyboard.nextLine();
-            selection = selection.trim();
-            
-            if (selection.length() <1) { //blank value entered
-                System.out.println("\n*** Invalid selection *** Try again");
-                continue;
-            }
-            
-            break;
-        }
-        
-        return selection; //return the name
-    }
-
-    private void doAction(char selection) {
+    
+    public boolean doAction(char selection) {
         
         switch (selection) {
             case 'N': //create and start a new game
@@ -91,8 +53,8 @@ public class MainMenuView {
     
     private void startNewGame (){
         
-        // create a new game
-        int value = GameControl.createNewGame(BuildYourDreamHome.getPlayer());
+        int value;
+        value = GameControl.createNewGame(BuildYourDreamHome.getPlayer());
         if (value<0) {
             System.out.println("ERROR - Failed to create new game");
         }
@@ -112,6 +74,16 @@ public class MainMenuView {
     private void displayHelpMenu() {
         HelpMenuView gameMenu = new HelpMenuView();
         gameMenu.displayMenu();
+    }
+
+    @Override
+    public void dispaly() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean doAction(Object obj) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 
